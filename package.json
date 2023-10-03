@@ -22,7 +22,7 @@
     "@react-navigation/native-stack": "^6.9.13",
     "dotenv": "^16.3.1",
     "expo": "^49.0.2",
-    "firebase": "^10.0.0",
+    "firebase": "^10.4.0",
     "fs": "^0.0.1-security",
     "install": "^0.13.0",
     "jail-monkey": "^2.8.0",
