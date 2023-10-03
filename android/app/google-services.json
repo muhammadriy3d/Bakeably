@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1039054533668",
+    "firebase_url": "https://bakably-default-rtdb.firebaseio.com",
+    "project_id": "bakably",
+    "storage_bucket": "bakably.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039054533668:android:bd73766cb9aba21bb394b1",
+        "android_client_info": {
+          "package_name": "com.bakeably"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039054533668-uf3srfmo0rs1oa47vnpdnut213cdlh2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYUqHAsFZBsQfS8kQCSWNWpeGZZMyONWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039054533668-uf3srfmo0rs1oa47vnpdnut213cdlh2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

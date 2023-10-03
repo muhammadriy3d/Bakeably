@@ -1,0 +1,39 @@
+// Import the required Gradle classes
+import org.gradle.api.tasks.Copy
+import org.gradle.api.tasks.Exec
+import org.gradle.api.tasks.bundling.Zip
+
+// Function to obfuscate JavaScript code
+def obfuscateJavaScript(variant) {
+    // Create tasks for different stages of the obfuscation process
+    def unzipTask = tasks.create(name: "unzipAPK", type: Copy)
+    def obfuscateTask = tasks.create(name: "obfuscate", type: Exec)
+    def zipTask = tasks.create(name: "zipAPK", type: Zip)
+
+    // Obtain the package task provider of the variant
+    Task packageTask = variant.getPackageApplicationProvider().get()
+
+    // Set dependencies between tasks
+    unzipTask.dependsOn(packageTask)
+    obfuscateTask.dependsOn(unzipTask)
+    zipTask.dependsOn(obfuscateTask)
+    variant.getAssembleProvider().get().dependsOn(zipTask)
+
+    // Configure the obfuscation task
+    obfuscateTask.doLast {
+        // Run the obfuscation process using a reputable obfuscation tool
+        exec {
+            // Replace 'obfuscation-tool' with the name of your chosen obfuscation tool
+            commandLine 'npx', 'obfuscation-tool', 'input.js', '--output', 'output.js'
+        }
+    }
+}
+
+// Run obfuscation only for release build types
+afterEvaluate {
+    android.applicationVariants.all { variant ->
+        if (variant.buildType.name.contains("release")) {
+            obfuscateJavaScript(variant)
+        }
+    }
+}

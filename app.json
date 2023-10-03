@@ -1,0 +1,8 @@
+{
+  "name": "Bakeably",
+  "displayName": "Bakeably",
+  
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-6863598730204510~2740895864"
+  }
+}
