@@ -19,7 +19,7 @@
     "@react-native-masked-view/masked-view": "^0.2.9",
     "@react-navigation/bottom-tabs": "^6.5.9",
     "@react-navigation/native": "^6.1.7",
-    "@react-navigation/native-stack": "^6.9.13",
+    "@react-navigation/native-stack": "^6.9.14",
     "dotenv": "^16.3.1",
     "expo": "^49.0.2",
     "firebase": "^10.4.0",
