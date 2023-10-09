@@ -12,7 +12,7 @@
   "dependencies": {
     "@firebase/app-check": "^0.8.0",
     "@firebase/app-check-compat": "^0.3.7",
-    "@react-native-async-storage/async-storage": "^1.19.0",
+    "@react-native-async-storage/async-storage": "^1.19.3",
     "@react-native-firebase/app": "^18.1.0",
     "@react-native-firebase/app-check": "^18.1.0",
     "@react-native-firebase/database": "^18.5.0",
