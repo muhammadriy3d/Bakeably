@@ -1,79 +1,189 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# Bakeably - A React Native App
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Introduction
 
-## Step 1: Start the Metro Server
+Bakeably is a **cloud based** mobile app built with React Native this is just a prototype without firebase is nothing. It's me the crazy man I built it with bunch of bugs so you can fix :), allowing users to bake better with family. This documentation serves as a guide for developers working on the Bakeably codebase.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Getting Started
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Firebase is a key in order to launch and use the app.
 
-```bash
-# using npm
-npm start
+Database example:
 
-# OR using Yarn
-yarn start
+```json
+{
+  "app": {
+    "app_title": "Find the best recipe for cooking",
+    "token": {
+      "adUnitId": "<adUnitId-Is-Here>"
+    }
+  },
+  "greet": {
+    "description": "Let's make the best dish for the family",
+    "image": "<IMAGE-URL-IS-HERE-start-with-https>",
+    "title": "Cooking Experience Like A Chef"
+  },
+  "recipes": [
+    {
+      "Cooking_time": "40 mins",
+      "author": "Who made this :)",
+      "calories": "280kcal",
+      "d_description": "5 stars, Servings 12 slices and 280kcal of Calories | 55 mins | Preparing 15 mins | Cooking 40 mins",
+      "d_title": "The Perfect Chocolate Cake",
+      "image": "<IMAGE-URL-IS-HERE-start-with-https>",
+      "ingredients": [
+        "1 ¾ cups (219 g) | all-purpose flour",
+        "2 cups (400 g) | granulated sugar",
+        "¾ cup (90 g) good quality unsweetened cocoa powder",
+        "2 teaspoons baking soda",
+        "1 teaspoon baking powder",
+        "1 teaspoon kosher salt",
+        "1 cup (240 g) buttermilk, room temperature",
+        "½ cup (112 g) vegetable oil",
+        "2 large eggs, room temperature",
+        "2 teaspoons McCormick pure vanilla extract",
+        "1 cup (237 g) freshly brewed hot coffee, regular or decaf, or hot water",
+        "chocolate buttercream frosting"
+      ],
+      "ingredients_value": [
+        "Preheat the oven to 350°F. Spray 2, 8-inch x 3-inch..."
+      ],
+      "isFavorite": false,
+      "preparing_time": "15 mins",
+      "rate": "5 stars",
+      "servings": "12 slices"
+    },
+}
 ```
 
-## Step 2: Start your Application
+# Preview
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+![App Image](https://github.com/muhammadriy3d/Bakeably/blob/main/docs/UI/app01.png?raw=true)
 
-### For Android
+![App Image](https://github.com/muhammadriy3d/Bakeably/blob/main/docs/UI/app02.png?raw=true)
 
-```bash
-# using npm
-npm run android
+![App Image](https://github.com/muhammadriy3d/Bakeably/blob/main/docs/UI/app03.png?raw=true)
 
-# OR using Yarn
-yarn android
-```
+![App Image](https://github.com/muhammadriy3d/Bakeably/blob/main/docs/UI/app04.png?raw=true)
 
-### For iOS
+![App Image](https://github.com/muhammadriy3d/Bakeably/blob/main/docs/UI/app05.png?raw=true)
 
-```bash
-# using npm
-npm run ios
+![App Image](https://github.com/muhammadriy3d/Bakeably/blob/main/docs/UI/app06.png?raw=true)
 
-# OR using Yarn
-yarn ios
-```
+![App Image](https://github.com/muhammadriy3d/Bakeably/blob/main/docs/UI/app07.png?raw=true)
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Prerequisites
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+* Node.js and npm (or Yarn) installed on your system.
+* A code editor of your choice (e.g., Visual Studio Code, Atom).
+* Basic understanding of React and JavaScript.
+* Firebase and admob account is required so the app can run because I didn't handle null values for APIs:
+   1. First make a firebase project and make an app.
+   2. make .env file and add your credientials in it **See .env.example**.
+   3. make an admob account and place your app id in:
 
-## Step 3: Modifying your App
+      ```json
+      {
+         "name": "Bakeably",
+         "displayName": "Bakeably",
+         
+         "react-native-google-mobile-ads": {
+            "android_app_id": "ca-app-pub-<Identifier-here>"
+         }
+      }
+      ```
 
-Now that you have successfully run the app, let's modify it.
+   4. or you can just fix the code :) or comment out BannerAd components but firebase is required.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Installation
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+1. Clone the Bakeably repository from
 
-## Congratulations! :tada:
+   ```bash
+   git clone https://github.com/muhammadriy3d/Bakeably
+   ```
 
-You've successfully run and modified your React Native App. :partying_face:
+2. Navigate to the project directory in your terminal.
 
-### Now what?
+   ```bash
+   cd Bakeably
+   ```
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+3. Install dependencies:
 
-# Troubleshooting
+   ```bash
+   npm install
+   ```
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+   (or using Yarn)
 
-# Learn More
+   ```bash
+   yarn install
+   ```
 
-To learn more about React Native, take a look at the following resources:
+## Running the App
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+1. Start the Metro bundler:
+
+   ```bash
+   npm start
+   ```
+
+   (or using Yarn)
+
+   ```bash
+   yarn start
+   ```
+
+2. In a separate terminal window, run the app for your desired platform:
+
+   **Android**
+
+   ```bash
+   npm run android
+   ```
+
+   (or using Yarn)
+
+   ```bash
+   yarn android
+   ```
+
+   **iOS**
+
+   **Note:** Setting up iOS development environment requires additional steps. Refer to the official React Native documentation for details on [https://reactnative.dev/docs/environment-setup](https://reactnative.dev/docs/environment-setup).
+
+   Assuming you have an iOS development environment set up:
+
+   ```bash
+   npm run ios
+   ```
+
+   (or using Yarn)
+
+   ```bash
+   yarn ios
+   ```
+
+This will launch the Bakeably app in your Android device/emulator or iOS simulator.
+
+## Code Structure
+
+* All app code is located at `src/` directory. and each directory is a screen and `assets/` include the splash background image
+
+## Testing
+
+* no test has been applied yet.
+
+## Contributing
+
+You are welcome to contribute to this app and fix bugs. as this app contains a lot of bugs :).
+
+1. Fork this repo
+2. Make change.
+3. make pull request to this repo so i can approve it and merge it.
+
+## License
+
+COPYRIGHTS (c) 2023 - 2024 Muhammad Riyad, All rights reserved.

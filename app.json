@@ -3,6 +3,6 @@
   "displayName": "Bakeably",
   
   "react-native-google-mobile-ads": {
-    "android_app_id": "ca-app-pub-<APP-ID-IS-HERE>"
+    "android_app_id": "ca-app-pub-<AppId>"
   }
 }
