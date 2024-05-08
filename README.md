@@ -81,7 +81,7 @@ Database example:
 * Firebase and admob account is required so the app can run because I didn't handle null values for APIs:
    1. First make a firebase project and make an app.
    2. make .env file and add your credientials in it **See .env.example**.
-   3. make an admob account and place your app id in:
+   3. make an admob account and place your app id in app.json:
 
       ```json
       {
