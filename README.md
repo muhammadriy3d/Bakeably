@@ -9,7 +9,7 @@ Bakeably is a **cloud based** mobile app built with React Native this is just a 
 
 Firebase is a key in order to launch and use the app.
 
-Database example:
+JSON API Structure example:
 
 ```json
 {
